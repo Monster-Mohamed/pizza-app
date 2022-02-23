@@ -76,7 +76,7 @@ const Header = () => {
           initial="hidden"
           animate="visible"
       >
-        <h1>Pizza Joint</h1>
+        <h1>ZMonsterPizza</h1>
       </motion.div>
     </header>
   )
