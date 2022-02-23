@@ -11,7 +11,7 @@ const Home = () => {
         when: "beforeChildren",
     }}>
       <h2>
-        Welcome to Pizza Joint
+        Welcome to Pizza Monster
       </h2>
         <MainButton to="/base">
             Create Your Pizza
