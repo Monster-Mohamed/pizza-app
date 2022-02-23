@@ -1,20 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Parent from "./UI/Parent";
+import OrdersButton from "./UI/OrdersButton";
+import List from "./UI/List";
 
 const Base = ({ addBase, pizza }) => {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
   return (
-    <div className="base container">
+    <Parent className="base">
 
       <h3>Step 1: Choose Your Base</h3>
       <ul>
         {bases.map(base => {
           let spanClass = pizza.base === base ? 'active' : '';
           return (
-            <li key={base} onClick={() => addBase(base)}>
+            <List key={base} onClick={() => addBase(base)}>
               <span className={spanClass}>{ base }</span>
-            </li>
+            </List>
           )
         })}
       </ul>
@@ -22,12 +25,12 @@ const Base = ({ addBase, pizza }) => {
       {pizza.base && (
         <div className="next">
           <Link to="/toppings">
-            <button>Next</button>
+            <OrdersButton>Next</OrdersButton>
           </Link>
         </div>
       )}
 
-    </div>
+    </Parent>
   )
 }
 

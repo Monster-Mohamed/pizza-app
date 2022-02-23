@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {motion} from "framer-motion"
+import Parent from "./UI/Parent";
+import MainButton from "./UI/MainButton";
+import Loader from "./Loader";
 
 const Home = () => {
   return (
-    <div className="home container">
+    <Parent className="home" extraTransition={{
+        when: "beforeChildren",
+    }}>
       <h2>
         Welcome to Pizza Joint
       </h2>
-      <Link to="/base">
-        <button>
-          Create Your Pizza
-        </button>
-      </Link>
-    </div>
+        <MainButton to="/base">
+            Create Your Pizza
+        </MainButton>
+    </Parent>
   )
 }
 
